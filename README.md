@@ -10,8 +10,8 @@ The files were written to read in csv-files which are exported by Fiji after man
 ## Structure of files
 Before the parameters can be fit to the cell data, the files of folder *2_datapreparation* have to be used to preprocess the raw csv-files from manual tracks in Fiji. First, file *extracring_centerofcellmass.py* can be used to update the cell postions in spots.csv if manually segmented frames are available for the same frame sequence. Second, file *mergin_csvfiles.py* reads in the updated spots.csv and raw edges.csv and merges the to two combine information in both dataframes. In both py-files, the final dataframes have to be saved by uncommenting the specified line towards the end of the code.
 
-To estimate beta and sigma_mot, the files in *3_parameterestimation* have to be used:
-- *brownianmotionparameterestimation_MLE.py*: fits the parameter with maximum likelihod to cell data from the merged dataframe of the **short-term dataset**.
+To estimate beta and sigma_mot, the files in *3_parameterestimation* have to be used which also contain contributions by Peter Embacher:
+- *brownianmotionparameterestimation_MLE.py*: fits the parameter with maximum likelihod to cell data from the merged dataframe of the **short-term dataset**. 
 - *brownianmotionparameterestiamtion_JPD.py*: fits the parameters by sampling from the joint posterior distribution and using cell data from the merged dataframe of the     **sort-term dataset**.
 - *brownianmotionparameterestiamtion_MSD.py*: fits the parameters to approximate the MSD curve using cell data from the merged dataframe of the **long-term dataset**.
 
