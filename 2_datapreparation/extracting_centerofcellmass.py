@@ -7,7 +7,8 @@ Note: the manual changes are to decide whether a whole folder of segmented
         be done in the first section "import segmentation files as tif". Also, 
         folder path and csv file name need to be adjusted accordingly.
         In the last section "getting output of whole script", frame intervals
-        can be adjusted to compute mean displacement and acceleration.
+        can be adjusted to compute mean displacement and acceleration. To save
+        the updated dataframe, the specified line has to be uncommented.
         
 """
 
@@ -203,8 +204,10 @@ def cellmovement_trackedcells(frame_minust, frame_zero, frame_t, t):
 #%% getting output of whole script
 
 if( __name__ == "__main__" ) :
-    spots = extractxenterofmass_trackedcells(spots)                      # save this dataframe with updated cell locations
-    
+    spots = extractxenterofmass_trackedcells(spots)
+    # uncomment next line to save updated spots dataframe
+    #spots.to_csv('G337_manualtracks/G337_40_frames_spots_centerofmasks.csv', index=False)
+
     # specify variables to compute global movement indicators
     frame_minust = 37
     frame_zero = 38
