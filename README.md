@@ -5,7 +5,7 @@ This project focused on fitting the **drag** (beta) and **scaling** (sigma_mot) 
 Three parameter estimation approaches were investigated to fit the parameters beta and sigma_mot to a sample of manually tracked cells in Fiji from live-cell imaging. 
 
 ## Data
-...
+There were **two datasets** with quantitative information on manually tracked cells available to this project. The first dataset, the **long-term dataset**, contains information on **15 cells** being tracked over **40 frames**. The second dataset, the **short-term dataset**, includes information on **50 cells** being tracked across the last **3 frames** of the 40-frame sequence.
 
 ## Structure of files
 ...
