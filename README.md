@@ -17,7 +17,7 @@ To estimate beta and sigma_mot, the files in *3_parameterestimation* have to be 
 
 Each of those files can be run independently after performing the data processing steps and details on the estimation procedure can be found in [3], [4]. A quick note at the beginning of each file outlines the manual changes required before running the file, which mostly only involve adjusting the file name or directory. Each file also generates diagnostic plots to evaluate the reliability of parameter estimates by each method.
 
-Finally, *4_analysis* includes the file *displ_accel_overtime.py*, which returns density plots of displacements and accelerations of cells in the **long-term dataset** over time to assess how or whether the density shapes change over time.
+Finally, *4_analysis* includes the file *displ_accel_overtime.py*, which returns density plots of displacements and accelerations of cells in the **long-term dataset** over time to assess how or whether the density shapes change over time. This file can also be run independently after performing the data processing steps.
 
 ## Sources/PDFs
 [1] Chandrasekhar, S. (1943). Stochastic problems in physics and astronomy (Chapter 2). Reviews of modern physics, 15(1), 1.
