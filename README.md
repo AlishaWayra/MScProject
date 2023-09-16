@@ -19,4 +19,5 @@ Each of those files can be run independently after performing the data processin
 Finally, *4_analysis* includes the file *displ_accel_overtime.py*, which returns density plots of displacements and accelerations of cells in the **long-term dataset** over time to assess how or whether the density shapes change over time.
 
 ## Sources
-...
+[1] Chandrasekhar
+[2]
