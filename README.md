@@ -12,7 +12,7 @@ Before the parameters can be fit to the tracking data, the files of folder *2_da
 
 To estimate beta and sigma_mot, the files in *3_parameterestimation* have to be used which also contain contributions by Peter Embacher:
 - *brownianmotionparameterestimation_MLE.py*: fits the parameter with maximum likelihod to cell data from the merged dataframe of the **short-term dataset**. 
-- *brownianmotionparameterestiamtion_JPD.py*: fits the parameters by sampling from the joint posterior distribution and using cell data from the merged dataframe of the     **sort-term dataset**.
+- *brownianmotionparameterestiamtion_JPD.py*: fits the parameters by sampling from the joint posterior distribution and using cell data from the merged dataframe of the     **short-term dataset**.
 - *brownianmotionparameterestiamtion_MSD.py*: fits the parameters to approximate the MSD curve using cell data from the merged dataframe of the **long-term dataset**.
 
 Each of those files can be run independently after performing the data processing steps and details on the estimation procedure can be found in [3], [4]. A quick note at the beginning of each file outlines the manual changes required before running the file, which mostly only involve adjusting the file name or directory. Each file also generates diagnostic plots to evaluate the reliability of parameter estimates by each method.
