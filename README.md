@@ -1,7 +1,7 @@
 # Fitting Brownian motion parameters to glioblastoma cell data
 
 ## Project Description
-This project focused on fitting the **drag** (beta) and **scaling** (sigma_mot) parameter from a Brownian motion model [1] to describe the **motion of patient-derived glioblastoma cells**. This work was motivated by the previous study [2] on the same cell lines where the deep learning based cell tracking algorithm Btrack was not successful in recreating cell lineage trees from glioblastoma time-lapse microscopy images. In the future, the **fitted Brownian motion parameters can be used to inform the global motion parameters of Btrack** in order to improve its performance in lineage tree construction.
+This project focused on fitting the **drag** $\beta$ and **scaling** $\sigma_{mot}$ parameter from a Brownian motion model [1] to describe the **motion of patient-derived glioblastoma cells**. This work was motivated by the previous study [2] on the same cell lines where the deep learning based cell tracking algorithm Btrack was not successful in recreating cell lineage trees from glioblastoma time-lapse microscopy images. In the future, the **fitted Brownian motion parameters can be used to inform the global motion parameters of Btrack** in order to improve its performance in lineage tree construction.
 Three parameter estimation approaches were investigated to fit the parameters beta and sigma_mot to a sample of manually tracked cells in Fiji from time-lapse microscopy images. 
 
 ## Data
@@ -10,7 +10,7 @@ The code files were written to read in csv-files which are exported by Fiji afte
 ## Structure of files
 Before the parameters can be fit to the tracking data, the files of folder *2_datapreparation* have to be used to preprocess the raw csv-files of both datasets. First, file *extracring_centerofcellmass.py* can be used to update the cell postions in spots.csv with the manually segmented frames of the same sequence. The segmented frames can be found in subfolder *manualsegmentationsbyJonathan* and should ideally be saved in a separate folder. To update spots.csv of the  **long-term dataset, all segmented frames are imported from the folder** by default when running the script. To update spots.csv of the **short-term dataset, the name of the corresponding frames have to be manually specified** before running the script in the specified lines. For the updated cell position, two new columns are added ('Position_X_EXACT', 'Position_Y_EXACT') to the dataframe. Second, file *merging_csvfiles.py* reads in the updated spots.csv and raw edges.csv and merges the two to combine information in both dataframes. In both py-files, the final dataframes have to be saved by uncommenting the specified line towards the end of the code.
 
-To estimate beta and sigma_mot, the files in *3_parameterestimation* have to be used which also contain contributions by Peter Embacher:
+To estimate $\beta$ and $\sigma_{mot}$, the files in *3_parameterestimation* have to be used which also contain contributions by Peter Embacher:
 - *brownianmotionparameterestimation_MLE.py*: fits the parameter with maximum likelihod to cell data from the merged dataframe of the **short-term dataset**. 
 - *brownianmotionparameterestiamtion_JPD.py*: fits the parameters by sampling from the joint posterior distribution and using cell data from the merged dataframe of the     **short-term dataset**.
 - *brownianmotionparameterestiamtion_MSD.py*: fits the parameters to approximate the MSD curve using cell data from the merged dataframe of the **long-term dataset**.
